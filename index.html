@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        body{
+            background-image: url("img/1.jpg") ;
+           background-size: cover;
+            overflow: hidden;}
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom:100px;
+            margin-left:200px;
+            animation:sport 6s linear 0s infinite normal;
+            transform-style: preserve-3d;
+
+           }
+        ul li {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;}
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+            background-color: papayawhip;
+           }
+        ul li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);}
+            to{transform:  rotateX(-10deg) rotateY(360deg);}
+        }
+    ul:hover {
+        animation-play-state: paused;
+    }
+    ul:hover li img{
+        opacity:1;
+    }
+        ul li img:hover{
+            opacity: 0.5;
+        }
+        .heart{
+            position: absolute;
+            bottom:100px;
+            left:100px;
+            animation: move 10s linear 0s infinite normal;
+        }
+        @keyframes move {
+            0%{
+                left: 100px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            20%{
+                left: 200px;
+                bottom: 200px;
+                opacity: 0;
+            }
+            40%{
+                left: 300px;
+                bottom: 300px;
+                opacity: 1;
+            }
+            60%{
+                left: 400px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            80%{
+                left: 500px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            100%{
+                left: 600px;
+                bottom: -200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="img/1.jpg" alt=""></li>
+    <li><img src="img/2.jpg" alt=""></li>
+    <li><img src="img/3.jpg" alt=""></li>
+    <li><img src="img/4.jpg" alt=""></li>
+    <li><img src="img/5.jpg" alt=""></li>
+    <li><img src="img/8.jpg" alt=""></li>
+    <img class="heart" src="img/xin.png" alt="">
+    <audio src="img/My Sunshine - 张杰.mp3" autoplay="autoplay" loop="loop"></audio>
+</ul>
+</body>
+</html>
